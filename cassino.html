@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suíte Royale Cassino</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="casino-page">
+  <main class="casino-shell" aria-labelledby="casino-title">
+    <header class="casino-header">
+      <!-- Logo principal baseada na imagem oficial enviada para o Suíte Royale. -->
+      <img class="casino-logo" src="assets/image(153).svg" alt="Logo oficial Cassino Suíte">
+      <div class="hero-card">
+        <p class="eyebrow">Cassino automatizado</p>
+        <h1 id="casino-title">Suíte Royale</h1>
+        <p class="subtitle">Aposte na sua diversão com mesas automáticas, saldo em tempo real e rankings do evento.</p>
+      </div>
+    </header>
+
+    <section class="player-panel" aria-label="Informações do jogador">
+      <div>
+        <span class="panel-label">Jogador</span>
+        <strong id="playerName">Visitante</strong>
+      </div>
+      <div>
+        <span class="panel-label">Saldo Atual</span>
+        <strong><span id="suiteCoins">0</span> SC</strong>
+      </div>
+    </section>
+
+    <section class="rankings-section" aria-labelledby="rankings-title">
+      <div class="section-heading compact-heading">
+        <p class="eyebrow">Atualizado em tempo real</p>
+        <h2 id="rankings-title">Rankings do Evento</h2>
+      </div>
+
+      <div class="rankings-grid">
+        <article class="ranking-card">
+          <span class="ranking-icon">👑</span>
+          <h3>Fortuna Acumulada</h3>
+          <ol id="fortuneRanking" class="ranking-list" aria-label="Ranking de jogadores com mais SuiteCoins"></ol>
+        </article>
+        <article class="ranking-card">
+          <span class="ranking-icon">🔥</span>
+          <h3>Risco / Frequência</h3>
+          <ol id="riskRanking" class="ranking-list" aria-label="Ranking de jogadores que mais apostaram"></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="games-section" aria-labelledby="games-title">
+      <div class="section-heading">
+        <p class="eyebrow">Aposta padrão: 50 SC</p>
+        <h2 id="games-title">Escolha seu jogo</h2>
+        <p id="globalBetMessage" class="bet-message" role="status" aria-live="polite">
+          Clique em qualquer mesa para apostar. O resultado aparece no card, o saldo é atualizado e tudo fica salvo na sessão.
+        </p>
+      </div>
+
+      <!-- Cada card possui data-game e data-bet para o JavaScript calcular a aposta automaticamente. -->
+      <div class="games-grid">
+        <article class="game-card" data-card="roulette">
+          <span class="game-icon">🎡</span>
+          <p class="game-type">Mesa de números</p>
+          <h3>Roleta Números</h3>
+          <p>A roleta sorteia um número de 0 a 36. Se cair no número da sorte, o prêmio é alto.</p>
+          <div class="game-meta">
+            <span>Aposta: 50 SC</span>
+            <span>Prêmio possível: 350 SC</span>
+            <span>Seu saldo: <strong class="card-balance">0 SC</strong></span>
+          </div>
+          <p class="card-result" aria-live="polite">Aguardando sua aposta.</p>
+          <button type="button" class="bet-button" data-game="roulette" data-bet="50">Apostar na Roleta</button>
+        </article>
+
+        <article class="game-card" data-card="dice">
+          <span class="game-icon">🎲</span>
+          <p class="game-type">Dois dados</p>
+          <h3>Dados do Destino</h3>
+          <p>Dois dados dourados são lançados. Some 8 ou mais para transformar destino em lucro.</p>
+          <div class="game-meta">
+            <span>Aposta: 50 SC</span>
+            <span>Prêmio possível: 120 SC</span>
+            <span>Seu saldo: <strong class="card-balance">0 SC</strong></span>
+          </div>
+          <p class="card-result" aria-live="polite">Aguardando sua aposta.</p>
+          <button type="button" class="bet-button" data-game="dice" data-bet="50">Lançar Dados</button>
+        </article>
+
+        <article class="game-card" data-card="parity">
+          <span class="game-icon">⚖️</span>
+          <p class="game-type">Par/Ímpar + Maior/Menor</p>
+          <h3>Par/Ímpar Royale</h3>
+          <p>O salão escolhe par, ímpar, maior ou menor e revela um número para o desafio.</p>
+          <div class="game-meta">
+            <span>Aposta: 50 SC</span>
+            <span>Prêmio possível: 95 SC</span>
+            <span>Seu saldo: <strong class="card-balance">0 SC</strong></span>
+          </div>
+          <p class="card-result" aria-live="polite">Aguardando sua aposta.</p>
+          <button type="button" class="bet-button" data-game="parity" data-bet="50">Apostar Par/Ímpar</button>
+        </article>
+
+        <article class="game-card" data-card="crash">
+          <span class="game-icon">🚀</span>
+          <p class="game-type">Multiplicador</p>
+          <h3>Crash</h3>
+          <p>O multiplicador sobe até parar. Se passar de 2.00x, a decolagem vira prêmio.</p>
+          <div class="game-meta">
+            <span>Aposta: 50 SC</span>
+            <span>Prêmio possível: variável</span>
+            <span>Seu saldo: <strong class="card-balance">0 SC</strong></span>
+          </div>
+          <p class="card-result" aria-live="polite">Aguardando sua aposta.</p>
+          <button type="button" class="bet-button" data-game="crash" data-bet="50">Decolar no Crash</button>
+        </article>
+
+        <article class="game-card" data-card="slots">
+          <span class="game-icon">💎</span>
+          <p class="game-type">Caça-níquel</p>
+          <h3>Slots</h3>
+          <p>Três símbolos brilham na tela. Duplas dão bônus e trincas liberam jackpot.</p>
+          <div class="game-meta">
+            <span>Aposta: 50 SC</span>
+            <span>Prêmio possível: até 250 SC</span>
+            <span>Seu saldo: <strong class="card-balance">0 SC</strong></span>
+          </div>
+          <p class="card-result" aria-live="polite">Aguardando sua aposta.</p>
+          <button type="button" class="bet-button" data-game="slots" data-bet="50">Girar Slots</button>
+        </article>
+
+        <article class="game-card" data-card="bingo">
+          <span class="game-icon">🏆</span>
+          <p class="game-type">Cartela rápida</p>
+          <h3>Bingo</h3>
+          <p>Cinco números são chamados. Acumule acertos na cartela royale para vencer.</p>
+          <div class="game-meta">
+            <span>Aposta: 50 SC</span>
+            <span>Prêmio possível: até 180 SC</span>
+            <span>Seu saldo: <strong class="card-balance">0 SC</strong></span>
+          </div>
+          <p class="card-result" aria-live="polite">Aguardando sua aposta.</p>
+          <button type="button" class="bet-button" data-game="bingo" data-bet="50">Jogar Bingo</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="future-section" aria-labelledby="future-title">
+      <div class="section-heading compact-heading">
+        <p class="eyebrow">Em breve</p>
+        <h2 id="future-title">Expansões do Royale</h2>
+      </div>
+
+      <!-- Espaço reservado para novas funcionalidades sem alterar o grid principal de jogos. -->
+      <div class="future-grid">
+        <article class="future-card">
+          <span>🏦</span>
+          <strong>Banco Imperial</strong>
+          <p>Área reservada para depósitos, bônus, cofres e controle avançado de SuiteCoins.</p>
+        </article>
+        <article class="future-card">
+          <span>🕶️</span>
+          <strong>Mercado Negro</strong>
+          <p>Espaço preparado para itens secretos, vantagens e trocas especiais do evento.</p>
+        </article>
+        <article class="future-card">
+          <span>🔨</span>
+          <strong>Leilão</strong>
+          <p>Base visual pronta para lances ao vivo sem quebrar o layout do cassino.</p>
+        </article>
+      </div>
+    </section>
+
+    <button id="logoutButton" class="secondary-button" type="button">Sair</button>
+  </main>
+
+  <script src="cassino.js"></script>
+</body>
+</html>
