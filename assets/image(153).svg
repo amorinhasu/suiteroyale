@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Logo Cassino Suíte</title>
+  <desc id="desc">Marca em verde, dourado, branco e preto para o cassino Suíte Royale.</desc>
+  <defs>
+    <radialGradient id="greenGlow" cx="50%" cy="32%" r="62%">
+      <stop offset="0%" stop-color="#00ff66"/>
+      <stop offset="38%" stop-color="#006633"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff9a8"/>
+      <stop offset="36%" stop-color="#ffd700"/>
+      <stop offset="70%" stop-color="#b88700"/>
+      <stop offset="100%" stop-color="#fff4a3"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity="0.72"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00ff66" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" fill="transparent"/>
+  <g filter="url(#softShadow)">
+    <path d="M96 394 Q202 270 368 246 Q424 116 600 96 Q776 116 832 246 Q998 270 1104 394 Q1004 604 600 668 Q196 604 96 394Z" fill="#000" stroke="url(#gold)" stroke-width="16"/>
+    <path d="M132 408 Q245 294 394 282 Q454 160 600 142 Q746 160 806 282 Q955 294 1068 408 Q960 558 600 616 Q240 558 132 408Z" fill="url(#greenGlow)" stroke="#00ff66" stroke-width="8"/>
+    <ellipse cx="600" cy="428" rx="438" ry="120" fill="#f8e9a6" stroke="url(#gold)" stroke-width="12"/>
+    <ellipse cx="600" cy="428" rx="402" ry="86" fill="#102612" opacity="0.22"/>
+
+    <g filter="url(#glow)">
+      <circle cx="600" cy="216" r="114" fill="#003b1d" stroke="url(#gold)" stroke-width="14"/>
+      <circle cx="600" cy="216" r="92" fill="#001a0c" stroke="#00ff66" stroke-width="5"/>
+      <path d="M600 96 L622 174 L704 174 L637 220 L663 300 L600 250 L537 300 L563 220 L496 174 L578 174Z" fill="url(#gold)"/>
+      <path d="M600 178 C644 218 668 250 652 287 C637 323 591 325 600 370 C551 323 496 314 528 250 C550 206 587 207 600 178Z" fill="#006633" stroke="url(#gold)" stroke-width="8"/>
+    </g>
+
+    <g fill="url(#gold)" filter="url(#glow)">
+      <circle cx="178" cy="404" r="10"/><circle cx="230" cy="358" r="10"/><circle cx="288" cy="326" r="10"/>
+      <circle cx="912" cy="326" r="10"/><circle cx="970" cy="358" r="10"/><circle cx="1022" cy="404" r="10"/>
+      <circle cx="260" cy="534" r="10"/><circle cx="354" cy="572" r="10"/><circle cx="846" cy="572" r="10"/><circle cx="940" cy="534" r="10"/>
+    </g>
+
+    <text x="600" y="444" text-anchor="middle" font-size="132" font-family="Georgia, 'Times New Roman', serif" font-weight="900" fill="#006633" stroke="url(#gold)" stroke-width="5" paint-order="stroke fill">CASSINO</text>
+    <text x="600" y="524" text-anchor="middle" font-size="86" font-family="Brush Script MT, Segoe Script, cursive" fill="#ffffff" stroke="#00ff66" stroke-width="2" paint-order="stroke fill">Suíte</text>
+    <path d="M356 572 H844" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+    <text x="600" y="618" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#ffd700">APOSTE NA SUA DIVERSÃO</text>
+  </g>
+</svg>

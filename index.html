@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suíte Royale Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+  <main class="login-container" aria-labelledby="login-title">
+    <p class="eyebrow">Cassino Exclusivo</p>
+    <h1 id="login-title">Suíte Royale</h1>
+    <p class="subtitle">Entre com o nome da sua suíte para receber 1000 SuiteCoins.</p>
+
+    <form id="loginForm" novalidate>
+      <label for="username">Nome da Suíte</label>
+      <input type="text" id="username" name="username" placeholder="Ex.: Suíte Diamante" autocomplete="username">
+
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" placeholder="Digite a senha" autocomplete="current-password">
+
+      <button type="submit">Entrar no Cassino</button>
+      <p id="message" class="message" role="alert" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
